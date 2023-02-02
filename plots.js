@@ -5,7 +5,7 @@ d3.json("data/data.json").then((importedData) => {
   var data = importedData;
 
   // Sort the data array using the greekSearchResults value
-  data.sort(function(a, b) {
+  data.sort(function (a, b) {
     return parseFloat(b.greekSearchResults) - parseFloat(a.greekSearchResults);
   });
 
@@ -13,7 +13,7 @@ d3.json("data/data.json").then((importedData) => {
   data = data.slice(0, 10);
 
   // Reverse the array due to Plotly's defaults
-  data = data.reverse();
+  // data = data.reverse();
 
   // Trace1 for the Greek Data
   var trace1 = {
